@@ -1,0 +1,3 @@
+node_modules/
+test/allTests.js
+npm-debug.log

@@ -1,0 +1,15 @@
+.container {
+  border: 2px solid red;
+  height: 100vh;
+  max-width: 660px;
+  margin: 0 auto;
+}
+
+.item {
+  margin: 1%;
+  width: 48%;
+  background:blue;
+  box-sizing: border-box;
+  float: left;
+  height: 300px;
+}
