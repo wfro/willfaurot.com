@@ -1,15 +1,75 @@
-.container {
-  border: 2px solid red;
-  height: 100vh;
-  max-width: 660px;
+$grid-spacing: 10px;
+
+@mixin albers-icon($color1, $color2, $color3) {
+  background-color: $color1;
+  opacity: 1;
+
+  &:hover {
+    opacity: 0.7;
+  }
+
+  .albers--inner-one {
+    @include inner-box($color2);
+  }
+  .albers--inner-two {
+    @include inner-box($color3);
+  }
+}
+
+@mixin inner-box($color) {
+  width: 80%;
+  height: 80%;
+  background: $color;
+  position: absolute;
+  bottom: 5%;
+  right: 0;
+  left: 0;
   margin: 0 auto;
 }
 
-.item {
-  margin: 1%;
-  width: 48%;
-  background:blue;
-  box-sizing: border-box;
-  float: left;
-  height: 300px;
+.home-row {
+  display: flex;
+  justify-content: center;
+  margin-bottom: $grid-spacing;
 }
+
+.albers {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 20em;
+  width: 20em;
+  position: relative;
+  cursor: pointer;
+  text-align: center;
+
+  &:nth-child(1) {
+    margin-right: $grid-spacing / 2;
+  }
+
+  &:nth-child(2) {
+    margin-left: $grid-spacing / 2;
+  }
+}
+
+.albers.home-writings {
+  @include albers-icon(#E9B439, #F4C13D, #FCD041);
+}
+
+.albers.home-projects {
+  @include albers-icon(#004798, #F9F7F3, #64B0EA);
+}
+
+.albers.home-twitter {
+  @include albers-icon(#00794F, #000102, #BBDFF4);
+}
+
+.albers.home-github {
+  @include albers-icon(#666666, #298892, #F4F2ED);
+}
+
+.home a {
+  text-decoration: none;
+  color: inherit; // TODO: why does this fix links being purple?
+}
+
