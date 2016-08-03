@@ -23,12 +23,12 @@ module.exports = {
         test: /\.scss$/,
         loader: ExtractTextPlugin.extract("style-loader", "css-loader!sass-loader"),
       },
+      {
+        test: /\.(png|jpg)$/,
+        loader: 'url?limit=25000',
+        include: path.join(__dirname, 'static'),
+      },
     ],
-    {
-      test: /\.(png|jpg)$/,
-      loader: 'url?limit=25000',
-      include: path.join(__dirname, 'static'),
-    },
   },
   plugins: [
     new webpack.optimize.OccurrenceOrderPlugin(),
