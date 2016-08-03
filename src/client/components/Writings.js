@@ -2,6 +2,11 @@ import React, { PropTypes } from 'react'
 
 const BLOGS = [
   {
+    title: 'The Chronograf Files: The Curious Case of JavaScript’s `sort`',
+    url: 'https://influxdata.com/blog/the-chronograf-files-the-curious-case-of-javascripts-sort/',
+    publishedAt: new Date(2016, 3, 5)
+  },
+  {
     title: 'Drill Baby Drill! Data Exploration in Chronograf',
     url: 'https://influxdata.com/blog/time-series-data-exploration-chronograf/',
     publishedAt: new Date(2015, 11, 15)
