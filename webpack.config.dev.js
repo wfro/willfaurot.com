@@ -17,7 +17,6 @@ module.exports = {
       {
         test: /\.js$/,
         loaders: ['babel'],
-        // TODO: commit this
         include: path.join(__dirname, 'src', 'client'),
       },
       {
@@ -33,10 +32,5 @@ module.exports = {
   },
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
-    new webpack.DefinePlugin({
-      'process.env': {
-        'NODE_ENV': JSON.stringify('production'),
-      },
-    }),
   ],
 };
