@@ -2,6 +2,11 @@ import React, { PropTypes } from 'react'
 
 const BLOGS = [
   {
+    title: 'Drill Baby Drill! Data Exploration in Chronograf',
+    url: 'https://influxdata.com/blog/time-series-data-exploration-chronograf/',
+    publishedAt: new Date(2015, 11, 15)
+  },
+  {
     title: 'Difference of Squares: JavaScript for Ruby Developers',
     url: 'https://github.com/wfro/blogs/blob/master/2015_3_25_javascript_for_ruby_developers_difference_of_squares.md',
     publishedAt: new Date(2015, 2, 25)
@@ -35,16 +40,15 @@ const BLOGS = [
 
 export default React.createClass({
   render() {
-    const blogs = BLOGS.map(blog => {
-      return (
-        <li className='blog'>
-          {blog.publishedAt.toLocaleDateString()} {'=> '}
-          <a href={blog.url}>{blog.title}</a>
-        </li>
-      )
-    });
     return (
-      <ul className='blogs'>{blogs}</ul>
+      <ul className='blogs'>
+        {BLOGS.map(blog => (
+          <li className='blog'>
+            {blog.publishedAt.toLocaleDateString()} {'=> '}
+            <a href={blog.url}>{blog.title}</a>
+          </li>
+        ))}
+      </ul>
     )
   }
 })
