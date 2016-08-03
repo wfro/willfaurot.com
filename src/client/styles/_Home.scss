@@ -56,20 +56,11 @@ $grid-spacing: 10px;
   @include albers-icon(#E9B439, #F4C13D, #FCD041);
 }
 
-.albers.home-projects {
-  @include albers-icon(#004798, #F9F7F3, #64B0EA);
-}
-
 .albers.home-twitter {
   @include albers-icon(#00794F, #000102, #BBDFF4);
 }
 
 .albers.home-github {
   @include albers-icon(#666666, #298892, #F4F2ED);
-}
-
-.home a {
-  text-decoration: none;
-  color: inherit; // TODO: why does this fix links being purple?
 }
 

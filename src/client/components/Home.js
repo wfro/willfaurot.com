@@ -2,24 +2,19 @@ import React, { PropTypes } from 'react'
 
 export default React.createClass({
   handleClickWritings() {
-    this.props.transitionTo('/writings');
+    this.props.transitionTo('/writings')
   },
 
   handleClickProjects() {
-    this.props.transitionTo('/projects');
+    this.props.transitionTo('/projects')
   },
 
   render() {
     return (
-      <div className='home'>
-        <div className='home-row'>
-          <AlbersIcon onClick={this.handleClickWritings} className='home-writings' text='writings' />
-          <AlbersIcon onClick={this.handleClickProjects} className='home-projects' text='projects' />
-        </div>
-        <div className='home-row'>
-          <a href='https://twitter.com/will_faurot'><AlbersIcon className='home-twitter' text='twitter' /></a>
-          <a href='https://github.com/wfro'><AlbersIcon className='home-github' text='github' /></a>
-        </div>
+      <div className='home-row'>
+        <AlbersIcon onClick={this.handleClickWritings} className='home-writings' text='writings' />
+        <a href='https://twitter.com/will_faurot'><AlbersIcon className='home-twitter' text='twitter' /></a>
+        <a href='https://github.com/wfro'><AlbersIcon className='home-github' text='github' /></a>
       </div>
     )
   },
@@ -41,6 +36,6 @@ const AlbersIcon = React.createClass({
           </div>
         </div>
       </div>
-    );
+    )
   }
 })

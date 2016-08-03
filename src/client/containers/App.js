@@ -25,11 +25,11 @@ export default React.createClass({
   render() {
     return (
       <div className='container'>
-        <div className='nav'>
+        <nav>
           {this.renderBackButton()}
-        </div>
+        </nav>
 
-        <div className='main-content'>
+        <div className='content'>
           {this.renderChild()}
         </div>
       </div>
@@ -40,8 +40,6 @@ export default React.createClass({
     this.setState({ currentRoute: route });
   },
 
-  // home icons navigate to respective routes
-  // back button always goes back to home
   renderChild() {
     switch (this.state.currentRoute) {
       case ROUTES.home:
